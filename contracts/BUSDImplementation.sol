@@ -631,4 +631,7 @@ contract BUSDImplementation {
         betaDelegateWhitelist[_addr] = false;
         emit BetaDelegateUnwhitelisted(_addr);
     }
+    function getTokenDetails() public view returns (string memory, string memory, uint8, uint256) {
+    return (name, symbol, decimals, totalSupply_);
+}
 }
